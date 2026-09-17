@@ -39,8 +39,27 @@ export default function Home() {
     setSelectedDate(date);
   };
 
-  const handleConfirmDate = () => {
+  const handleConfirmDate = async () => {
     if (selectedDate) {
+      const year = selectedDate.getFullYear();
+      const month = String(selectedDate.getMonth() + 1).padStart(2, "0");
+      const day = String(selectedDate.getDate()).padStart(2, "0");
+
+      try {
+        await fetch("/api/notify-date", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            date: `${year}-${month}-${day}`,
+            activity: preferences.activity,
+            vibe: preferences.vibe,
+            rule: preferences.music,
+          }),
+        });
+      } catch (error) {
+        console.error("Could not send date notification:", error);
+      }
+
       setStep("CONFIRMATION");
     }
   };
