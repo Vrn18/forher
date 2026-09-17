@@ -29,6 +29,8 @@ export async function POST(request: Request) {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
+      Origin: "https://forher-qzcq.onrender.com",
+      Referer: "https://forher-qzcq.onrender.com/",
     },
     body: JSON.stringify({
       _subject: `They picked ${payload.date} for your date ♡`,
