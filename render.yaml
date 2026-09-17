@@ -10,6 +10,6 @@ services:
       - key: RESEND_API_KEY
         sync: false
       - key: NOTIFICATION_EMAIL
-        sync: false
+        value: gangamvarun5@gmail.com
       - key: RESEND_FROM_EMAIL
         sync: false
