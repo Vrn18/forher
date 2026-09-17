@@ -37,8 +37,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 ## Email notifications
 
-Date confirmations are sent through [Resend](https://resend.com/). Add these environment variables in Render before using the invitation:
-
-- `RESEND_API_KEY`: your Resend API key
-- `NOTIFICATION_EMAIL`: the address that should receive confirmations
-- `RESEND_FROM_EMAIL`: a verified sender, such as `Date Invitation <onboarding@resend.dev>` for testing
+Date confirmations are sent through [FormSubmit](https://formsubmit.co/) to the `NOTIFICATION_EMAIL` address. The first submission may send an activation email that must be confirmed before delivery begins.

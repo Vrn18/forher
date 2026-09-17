@@ -7,9 +7,5 @@ services:
     startCommand: npm run start
     autoDeploy: true
     envVars:
-      - key: RESEND_API_KEY
-        sync: false
       - key: NOTIFICATION_EMAIL
         value: gangamvarun5@gmail.com
-      - key: RESEND_FROM_EMAIL
-        sync: false
